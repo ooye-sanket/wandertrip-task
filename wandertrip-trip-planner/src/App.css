@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: white;
+  font-family: 'Arial', sans-serif; /* Base font for the page */
+}
+
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  align-items: center;
+  padding: 2rem; /* optional overall padding */
+}
+
+.title {
+  font-family: 'Montserrat', 'Raleway', 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #720026;
+  text-align: center;
+  margin-top: 2rem;       /* push it a bit from the top */
+  padding: 0 2rem;        /* equal spacing left & right */
+  width: 100%;
+  max-width: 800px;       /* optional: keep it from stretching too wide */
+  letter-spacing: 1px;    /* better letter spacing */
+  text-transform: uppercase; /* Optional: makes it all caps */
+}
