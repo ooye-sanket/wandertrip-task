@@ -11,7 +11,7 @@ html, body {
 
 body {
   background-color: white;
-  font-family: 'Arial', sans-serif; /* Base font for the page */
+  font-family: 'Arial', sans-serif;
 }
 
 .app-container {
@@ -19,9 +19,9 @@ body {
   width: 100%;
   background-color: white;
   display: flex;
-  flex-direction: column; /* stack children vertically */
+  flex-direction: column;
   align-items: center;
-  padding: 2rem; /* optional overall padding */
+  padding: 2rem;
 }
 
 .title {
@@ -30,10 +30,143 @@ body {
   font-size: 3rem;
   color: #720026;
   text-align: center;
-  margin-top: 2rem;       /* push it a bit from the top */
-  padding: 0 2rem;        /* equal spacing left & right */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
   width: 100%;
-  max-width: 800px;       /* optional: keep it from stretching too wide */
-  letter-spacing: 1px;    /* better letter spacing */
-  text-transform: uppercase; /* Optional: makes it all caps */
+  max-width: 800px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
+
+/* Form Styling */
+.planner-form {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #4f000b;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  border-color: #ce4257;
+  outline: none;
+}
+
+/* Date Group Styling */
+.date-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.date-input {
+  flex: 1;
+}
+
+/* Interests Styling */
+.interests-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.interest-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.interest-option input[type="checkbox"] {
+  accent-color: #ce4257;
+  width: 18px;
+  height: 18px;
+}
+
+/* Button Styling */
+.submit-btn, .back-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #ce4257;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover, .back-btn:hover {
+  background-color: #720026;
+}
+
+/* Trip Summary Styling */
+.trip-summary {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.trip-summary h2 {
+  color: #720026;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.summary-details {
+  margin-bottom: 2rem;
+}
+
+.summary-details p {
+  margin-bottom: 1rem;
+}
+
+.summary-details ul {
+  list-style-position: inside;
+  margin-left: 1rem;
+}
+
+.summary-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .interests-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .date-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
